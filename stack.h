@@ -16,6 +16,7 @@ public:
 void Stack::push(int x){
   NodePtr new_node=new NODE(x);
   if(new_node){
+    
             // Left missing for exercises…
    }
  
@@ -26,10 +27,14 @@ void Stack::push(int x){
 int Stack::pop(){
         NodePtr t=top;
         int value;
-        value=t->get_value();
-    // Left missing part for exercises
-        delete t;
-        return value;
+        if(t!=NULL){
+            value=t->get_value();
+        // Left missing part for exercises
+        // move top to the next one
+        // decrease the size
+            delete t;
+            return value;
+        }
 	//be careful of the empty stack!!!
     }
 
