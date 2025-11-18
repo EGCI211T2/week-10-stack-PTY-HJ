@@ -14,7 +14,7 @@ public:
 
 
 void Stack::push(int x){
-  NodePtr new_node=new NODE(x);
+  NodePtr new_node=new NODE(x); // create a new node
   if(new_node){
      //connect the previous top
     new_node->set_next(top);
